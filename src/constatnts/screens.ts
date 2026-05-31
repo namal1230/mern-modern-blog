@@ -1,0 +1,1 @@
+export const SCREENS = ["landing", "signin", "home", "post", "profile"];
