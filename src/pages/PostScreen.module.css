@@ -1,0 +1,278 @@
+.container {
+    min-height: 100vh;
+    background: #fafaf9;
+}
+
+.contentWrapper {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 28px 80px;
+}
+
+.backButton {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #888;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 32px;
+    padding: 0;
+    font-family: system-ui, sans-serif;
+}
+
+.tagBadge {
+    display: inline-block;
+    margin-bottom: 16px;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 12px;
+    border-radius: 100px;
+    font-family: system-ui, sans-serif;
+}
+
+.title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 700;
+    color: #0a0a0a;
+    margin: 0 0 24px;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.authorInfo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 36px;
+    font-family: system-ui, sans-serif;
+}
+
+.authorAvatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #111;
+    color: white;
+    font-weight: 700;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.authorDetails {
+    flex: 1;
+}
+
+.authorName {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #222;
+}
+
+.authorMeta {
+    margin: 0;
+    font-size: 12px;
+    color: #999;
+}
+
+.followButton {
+    padding: 7px 18px;
+    border-radius: 100px;
+    border: 1.5px solid #222;
+    background: none;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: system-ui, sans-serif;
+}
+
+.contentBox {
+    background: white;
+    border-radius: 20px;
+    padding: 36px 40px;
+    border: 1px solid #f0f0f0;
+    margin-bottom: 32px;
+}
+
+.paragraph {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #2a2a2a;
+    margin: 0 0 24px;
+    font-family: Georgia, serif;
+}
+
+.codeBlock {
+    background: #0d1117;
+    color: #e6edf3;
+    border-radius: 12px;
+    padding: 24px 28px;
+    overflow-x: auto;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0 0 24px;
+    font-family: 'Courier New', monospace;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 40px;
+    font-family: system-ui, sans-serif;
+}
+
+.actionButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border-radius: 100px;
+    border: 1.5px solid #ddd;
+    background: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    font-family: system-ui, sans-serif;
+}
+
+.actionButton.liked {
+    border-color: #ef4444;
+    background: #fff1f1;
+    color: #ef4444;
+}
+
+.shareButton {
+    margin-left: auto;
+}
+
+.commentsSection {
+    background: white;
+    border-radius: 20px;
+    padding: 28px 32px;
+    border: 1px solid #f0f0f0;
+}
+
+.commentsTitle {
+    margin: 0 0 24px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: system-ui, sans-serif;
+}
+
+.comment {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+}
+
+.comment:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.commentAvatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    color: white;
+    font-weight: 700;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.commentContent {
+    flex: 1;
+}
+
+.commentHeader {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 6px;
+    font-family: system-ui, sans-serif;
+}
+
+.commentUsername {
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.commentTime {
+    font-size: 12px;
+    color: #bbb;
+}
+
+.commentText {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+    font-family: system-ui, sans-serif;
+}
+
+.commentForm {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.commentFormAvatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: #111;
+    color: white;
+    font-weight: 700;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.commentFormContent {
+    flex: 1;
+}
+
+.commentTextarea {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 1.5px solid #e5e5e5;
+    font-size: 14px;
+    resize: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: system-ui, sans-serif;
+    color: #333;
+}
+
+.commentFormActions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px;
+}
+
+.postCommentButton {
+    padding: 8px 20px;
+    border-radius: 100px;
+    border: none;
+    background: #111;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: system-ui, sans-serif;
+}

@@ -1,0 +1,214 @@
+.container {
+    min-height: 100vh;
+    background: #fafaf9;
+}
+
+.contentWrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 48px 28px 80px;
+}
+
+.profileCard {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 48px;
+    border: 1px solid #f0f0f0;
+    margin-bottom: 24px;
+}
+
+.profileHeader {
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.profileAvatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #111;
+    color: white;
+    font-weight: 700;
+    font-size: 28px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profileInfo {
+    flex: 1;
+}
+
+.profileTitleSection {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.profileName {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+    color: #111;
+    font-family: 'Playfair Display', serif;
+}
+
+.profileFollowButton {
+    padding: 8px 22px;
+    border-radius: 100px;
+    border: 1.5px solid #111;
+    background: #111;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: system-ui, sans-serif;
+}
+
+.profileFollowButton.following {
+    background: white;
+    border-color: #bbb;
+    color: #555;
+}
+
+.profileJobTitle {
+    margin: 6px 0 0;
+    font-size: 14px;
+    color: #888;
+    font-family: system-ui, sans-serif;
+}
+
+.profileBio {
+    margin: 16px 0 20px;
+    font-size: 15px;
+    color: #444;
+    line-height: 1.6;
+    font-family: system-ui, sans-serif;
+    max-width: 480px;
+}
+
+.profileStats {
+    display: flex;
+    gap: 28px;
+    font-family: system-ui, sans-serif;
+}
+
+.profileStat {
+}
+
+.profileStatNumber {
+    font-weight: 700;
+    font-size: 20px;
+    color: #111;
+}
+
+.profileStatLabel {
+    font-size: 13px;
+    color: #999;
+    margin-left: 6px;
+}
+
+.profileSkillsSection {
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.skillsLabel {
+    margin: 0 0 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-family: system-ui, sans-serif;
+}
+
+.skillsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skillTag {
+    padding: 6px 16px;
+    border-radius: 100px;
+    background: #f5f5f5;
+    font-size: 13px;
+    font-weight: 500;
+    color: #333;
+    font-family: system-ui, sans-serif;
+}
+
+.postsSection {
+    margin-bottom: 20px;
+}
+
+.postsTitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 20px;
+}
+
+.postsList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.postItem {
+    background: white;
+    border-radius: 16px;
+    padding: 22px 28px;
+    border: 1px solid #f0f0f0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: box-shadow 0.15s;
+}
+
+.postItem:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.postItemContent {
+    flex: 1;
+}
+
+.postItemTitle {
+    margin: 0 0 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #111;
+    font-family: 'Playfair Display', serif;
+}
+
+.postItemMeta {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    font-family: system-ui, sans-serif;
+}
+
+.postItemTag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 100px;
+}
+
+.postItemStat {
+    font-size: 12px;
+    color: #bbb;
+}
+
+.postItemArrow {
+    color: #ccc;
+}

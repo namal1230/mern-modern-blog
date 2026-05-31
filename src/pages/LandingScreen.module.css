@@ -1,0 +1,216 @@
+.container {
+    min-height: 100vh;
+    background: #fafaf9;
+    font-family: Georgia, serif;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #111;
+}
+
+.navButtons {
+    display: flex;
+    gap: 8px;
+}
+
+.signInButton {
+    padding: 9px 22px;
+    border-radius: 100px;
+    border: 1.5px solid #ddd;
+    font-size: 14px;
+    background: white;
+    cursor: pointer;
+    font-weight: 500;
+    color: #333;
+    font-family: system-ui, sans-serif;
+}
+
+.startButton {
+    padding: 9px 22px;
+    border-radius: 100px;
+    border: none;
+    font-size: 14px;
+    background: #111;
+    cursor: pointer;
+    font-weight: 500;
+    color: white;
+    font-family: system-ui, sans-serif;
+}
+
+.hero {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 40px 60px;
+    text-align: center;
+}
+
+.badge {
+    display: inline-block;
+    background: #f0fdf4;
+    color: #16a34a;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 14px;
+    border-radius: 100px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    font-family: system-ui, sans-serif;
+}
+
+.heroTitle {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 7vw, 76px);
+    font-weight: 700;
+    line-height: 1.1;
+    color: #0a0a0a;
+    margin: 0 0 28px;
+    letter-spacing: -2px;
+}
+
+.heroEmphasis {
+    font-style: italic;
+    color: #555;
+}
+
+.heroDescription {
+    font-size: 18px;
+    color: #666;
+    max-width: 520px;
+    margin: 0 auto 48px;
+    line-height: 1.7;
+    font-family: system-ui, sans-serif;
+}
+
+.heroButton {
+    padding: 14px 40px;
+    border-radius: 100px;
+    background: #111;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    letter-spacing: -0.3px;
+    font-family: system-ui, sans-serif;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 56px;
+    border-top: 1px solid #eee;
+    padding-top: 40px;
+    font-family: system-ui, sans-serif;
+}
+
+.stat {
+    text-align: center;
+}
+
+.statNumber {
+    font-size: 28px;
+    font-weight: 700;
+    color: #111;
+}
+
+.statLabel {
+    font-size: 13px;
+    color: #888;
+    margin-top: 4px;
+}
+
+.trendingSection {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px 100px;
+}
+
+.trendingTitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 28px;
+}
+
+.trendingGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.trendingCard {
+    text-align: left;
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 16px;
+    padding: 24px 24px 20px;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.trendingCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+.trendingCardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.trendingTag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-family: system-ui, sans-serif;
+}
+
+.readTime {
+    font-size: 11px;
+    color: #999;
+    font-family: system-ui, sans-serif;
+}
+
+.trendingCardTitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #111;
+    line-height: 1.4;
+    margin: 0 0 16px;
+}
+
+.trendingCardFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: system-ui, sans-serif;
+}
+
+.trendingAuthor {
+    font-size: 12px;
+    color: #888;
+}
+
+.trendingStats {
+    display: flex;
+    gap: 12px;
+    color: #aaa;
+    font-size: 12px;
+}

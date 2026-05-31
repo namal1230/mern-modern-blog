@@ -5,91 +5,71 @@ import { tagBg } from "../constatnts/tagBg";
 import type { ScreenProps } from "../types/screen.types";
 import { MOCK_POSTS } from "../constatnts/mockPosts";
 import { MOCK_PROFILE } from "../constatnts/mockProfile";
+import styles from "./ProfileScreen.module.css";
 
 export const  ProfileScreen:React.FC<ScreenProps>=({ setScreen })=> {
   const [following, setFollowing] = useState(false);
   return (
-    <div style={{ minHeight: "100vh", background: "#fafaf9" }}>
+    <div className={styles.container}>
       <Header screen="profile" setScreen={setScreen} notifications={3} />
-      <div style={{ maxWidth: 800, margin: "0 auto", padding: "48px 28px 80px" }}>
-        <div style={{ background: "white", borderRadius: 20, padding: "40px 48px", border: "1px solid #f0f0f0", marginBottom: 24 }}>
-          <div style={{ display: "flex", alignItems: "flex-start", gap: 28, flexWrap: "wrap" }}>
-            <div style={{
-              width: 90, height: 90, borderRadius: "50%", background: "#111",
-              color: "white", fontWeight: 700, fontSize: 28, flexShrink: 0,
-              display: "flex", alignItems: "center", justifyContent: "center",
-            }}>CD</div>
-            <div style={{ flex: 1 }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
-                <h1 style={{ margin: 0, fontSize: 26, fontWeight: 700, color: "#111", fontFamily: "'Playfair Display', serif" }}>
+      <div className={styles.contentWrapper}>
+        <div className={styles.profileCard}>
+          <div className={styles.profileHeader}>
+            <div className={styles.profileAvatar}>CD</div>
+            <div className={styles.profileInfo}>
+              <div className={styles.profileTitleSection}>
+                <h1 className={styles.profileName}>
                   @{MOCK_PROFILE.name}
                 </h1>
-                <button onClick={() => setFollowing(!following)} style={{
-                  padding: "8px 22px", borderRadius: 100,
-                  border: `1.5px solid ${following ? "#bbb" : "#111"}`,
-                  background: following ? "white" : "#111",
-                  color: following ? "#555" : "white",
-                  fontSize: 13, fontWeight: 600, cursor: "pointer",
-                  fontFamily: "system-ui, sans-serif",
-                }}>{following ? "Following ✓" : "Follow"}</button>
+                <button onClick={() => setFollowing(!following)} className={`${styles.profileFollowButton} ${following ? styles.following : ""}`}>
+                  {following ? "Following ✓" : "Follow"}
+                </button>
               </div>
-              <p style={{ margin: "6px 0 0", fontSize: 14, color: "#888", fontFamily: "system-ui, sans-serif" }}>{MOCK_PROFILE.jobTitle} · {MOCK_PROFILE.experienceYears} yrs exp</p>
-              <p style={{ margin: "16px 0 20px", fontSize: 15, color: "#444", lineHeight: 1.6, fontFamily: "system-ui, sans-serif", maxWidth: 480 }}>
+              <p className={styles.profileJobTitle}>{MOCK_PROFILE.jobTitle} · {MOCK_PROFILE.experienceYears} yrs exp</p>
+              <p className={styles.profileBio}>
                 {MOCK_PROFILE.bio}
               </p>
-              <div style={{ display: "flex", gap: 28, fontFamily: "system-ui, sans-serif" }}>
-                <div>
-                  <span style={{ fontWeight: 700, fontSize: 20, color: "#111" }}>{MOCK_PROFILE.followers}</span>
-                  <span style={{ fontSize: 13, color: "#999", marginLeft: 6 }}>followers</span>
+              <div className={styles.profileStats}>
+                <div className={styles.profileStat}>
+                  <span className={styles.profileStatNumber}>{MOCK_PROFILE.followers}</span>
+                  <span className={styles.profileStatLabel}>followers</span>
                 </div>
-                <div>
-                  <span style={{ fontWeight: 700, fontSize: 20, color: "#111" }}>{MOCK_PROFILE.posts}</span>
-                  <span style={{ fontSize: 13, color: "#999", marginLeft: 6 }}>posts</span>
+                <div className={styles.profileStat}>
+                  <span className={styles.profileStatNumber}>{MOCK_PROFILE.posts}</span>
+                  <span className={styles.profileStatLabel}>posts</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <div style={{ marginTop: 28, paddingTop: 24, borderTop: "1px solid #f0f0f0" }}>
-            <h3 style={{ margin: "0 0 12px", fontSize: 13, fontWeight: 600, color: "#888", textTransform: "uppercase", letterSpacing: "0.06em", fontFamily: "system-ui, sans-serif" }}>Skills</h3>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+          <div className={styles.profileSkillsSection}>
+            <h3 className={styles.skillsLabel}>Skills</h3>
+            <div className={styles.skillsList}>
               {MOCK_PROFILE.skills.map(skill => (
-                <span key={skill} style={{
-                  padding: "6px 16px", borderRadius: 100,
-                  background: "#f5f5f5", fontSize: 13, fontWeight: 500, color: "#333",
-                  fontFamily: "system-ui, sans-serif",
-                }}>{skill}</span>
+                <span key={skill} className={styles.skillTag}>{skill}</span>
               ))}
             </div>
           </div>
         </div>
 
-        <h2 style={{
-          fontFamily: "'Playfair Display', serif",
-          fontSize: 22, fontWeight: 700, color: "#111", margin: "0 0 20px",
-        }}>Published posts</h2>
+        <h2 className={styles.postsTitle}>Published posts</h2>
 
-        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+        <div className={styles.postsList}>
           {MOCK_POSTS.map((post, i) => (
-            <div key={post._id} onClick={() => setScreen("post")} style={{
-              background: "white", borderRadius: 16, padding: "22px 28px",
-              border: "1px solid #f0f0f0", cursor: "pointer", display: "flex",
-              alignItems: "center", gap: 20,
-              transition: "box-shadow 0.15s",
-            }}
+            <div key={post._id} onClick={() => setScreen("post")} className={styles.postItem}
             onMouseEnter={e => e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,0,0,0.05)"}
             onMouseLeave={e => e.currentTarget.style.boxShadow = "none"}
             >
-              <div style={{ flex: 1 }}>
-                <h3 style={{ margin: "0 0 8px", fontSize: 16, fontWeight: 600, color: "#111", fontFamily: "'Playfair Display', serif" }}>{post.title}</h3>
-                <div style={{ display: "flex", gap: 12, alignItems: "center", fontFamily: "system-ui, sans-serif" }}>
-                  <span style={{
-                    fontSize: 11, fontWeight: 600, padding: "2px 8px", borderRadius: 100,
-                    background: tagBg[post.tag] || tagBg.default, color: tagColors[post.tag] || tagColors.default,
+              <div className={styles.postItemContent}>
+                <h3 className={styles.postItemTitle}>{post.title}</h3>
+                <div className={styles.postItemMeta}>
+                  <span className={styles.postItemTag} style={{
+                    background: tagBg[post.tag] || tagBg.default, 
+                    color: tagColors[post.tag] || tagColors.default,
                   }}>#{post.tag}</span>
-                  <span style={{ fontSize: 12, color: "#bbb" }}>♥ {post.likeCount}</span>
-                  <span style={{ fontSize: 12, color: "#bbb" }}>💬 {post.commentCount}</span>
-                  <span style={{ fontSize: 12, color: "#bbb" }}>{post.readTime}</span>
+                  <span className={styles.postItemStat}>♥ {post.likeCount}</span>
+                  <span className={styles.postItemStat}>💬 {post.commentCount}</span>
+                  <span className={styles.postItemStat}>{post.readTime}</span>
                 </div>
               </div>
               <svg width="16" height="16" fill="none" stroke="#ccc" strokeWidth="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>

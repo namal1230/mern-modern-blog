@@ -1,0 +1,247 @@
+.container {
+    min-height: 100vh;
+    background: #fafaf9;
+}
+
+.contentWrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 28px;
+    display: flex;
+    gap: 40px;
+}
+
+.main {
+    flex: 1;
+    padding-top: 36px;
+}
+
+.tabContainer {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0;
+}
+
+.tabButton {
+    padding: 10px 18px;
+    border-radius: 8px 8px 0 0;
+    border: none;
+    background: transparent;
+    font-family: system-ui, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 400;
+    border-bottom: 2px solid transparent;
+    color: #888;
+    transition: all 0.15s;
+}
+
+.tabButton.active {
+    background: white;
+    color: #111;
+    font-weight: 600;
+    border-bottom: 2px solid #111;
+}
+
+.postList {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.postCard {
+    background: white;
+    border-radius: 16px;
+    padding: 24px 28px;
+    border: 1px solid #f0f0f0;
+    cursor: pointer;
+    margin-bottom: 12px;
+    transition: box-shadow 0.15s, border-color 0.15s;
+}
+
+.postCard:hover {
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    border-color: #e5e5e5;
+}
+
+.postHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.postContent {
+    flex: 1;
+}
+
+.postMeta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    font-family: system-ui, sans-serif;
+}
+
+.postAvatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    color: white;
+    font-weight: 700;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.postUsername {
+    font-size: 13px;
+    font-weight: 500;
+    color: #333;
+}
+
+.postDate {
+    font-size: 12px;
+    color: #bbb;
+}
+
+.postTitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 14px;
+    line-height: 1.35;
+}
+
+.postFooter {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: system-ui, sans-serif;
+}
+
+.tagBadge {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 100px;
+}
+
+.postStats {
+    display: flex;
+    gap: 14px;
+    color: #bbb;
+    font-size: 13px;
+}
+
+.statItem {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.postImage {
+    width: 80px;
+    height: 60px;
+    border-radius: 10px;
+    background: #f0f0f0;
+    flex-shrink: 0;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    font-size: 20px;
+}
+
+.sidebar {
+    width: 260px;
+    padding-top: 36px;
+    flex-shrink: 0;
+}
+
+.sidebarCard {
+    background: white;
+    border-radius: 16px;
+    padding: 20px 22px;
+    border: 1px solid #f0f0f0;
+    margin-bottom: 16px;
+}
+
+.sidebarTitle {
+    margin: 0 0 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #111;
+    font-family: system-ui, sans-serif;
+}
+
+.tagGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 100px;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: system-ui, sans-serif;
+}
+
+.suggestedWriter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    cursor: pointer;
+}
+
+.writerAvatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    color: white;
+    font-weight: 700;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.writerInfo {
+    flex: 1;
+}
+
+.writerName {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 500;
+    color: #222;
+    font-family: system-ui, sans-serif;
+}
+
+.writerLikes {
+    margin: 0;
+    font-size: 11px;
+    color: #aaa;
+    font-family: system-ui, sans-serif;
+}
+
+.followButton {
+    padding: 4px 12px;
+    border-radius: 100px;
+    border: 1.5px solid #222;
+    background: none;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: system-ui, sans-serif;
+}
