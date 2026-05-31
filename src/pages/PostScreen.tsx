@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Header } from "./Header";
+import { Header } from "../components/Header";
 import { tagColors } from "../constatnts/tagColors";
 import { tagBg } from "../constatnts/tagBg";
 import type { ScreenProps } from "../types/screen.types";
